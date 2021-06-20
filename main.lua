@@ -1,45 +1,3 @@
--- print("\n| hello there")
-
--- copas = {1958,1962,1970,1994,2002}
-
--- paises = {
---     [58] = "| Suecia",
---     [62] = "| Chile",
---     [70] = "| Mexico",
---     [94] = "| EUA",
---     [02] = "| Japão e Coreia do Sul",
--- }
-
--- for k,v in pairs(paises) do
---     print(k, v)
--- end
-
--- ultimacopa = {
---     ano = 2002,
---     sede = "Japao e Coreia do Sul",
---     jogadores = {
---         "kafu",
---         "pele"
---     },
-
---     imprime = function (self)
---         for k,v in ipairs(self.jogadores) do
---             print(self.jogadores[k])
---         end
---     end
--- }
-
--- print(ultimacopa["ano"])
--- print(ultimacopa.ano)
-
--- ultimacopa.capitao = "cafu"
-
--- table.insert(ultimacopa.jogadores, "sua mae")
--- table.insert(ultimacopa.jogadores, "zico")
--- table.remove(ultimacopa.jogadores, 4)
-
--- ultimacopa:imprime()
-
 LARGURA_TELA = 640
 ALTURA_TELA = 942
 MAX_METEOROS = 12
@@ -130,9 +88,6 @@ function love.update(dt)
         end
 
         moveMeteoros()
-
-
-
 
     end
 end
