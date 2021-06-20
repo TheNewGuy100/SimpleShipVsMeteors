@@ -43,7 +43,7 @@ function love.load()
     math.randomseed(os.time())
 
     love.window.setMode( LARGURA_TELA, ALTURA_TELA, {resizable = false})
-    love.window.setTitle("14 Bis vs Meteoros")
+    love.window.setTitle("SimpleShip Vs Meteors")
 
     background = love.graphics.newImage("models/background.png")
     background = love.graphics.newImage("models/background.png")
@@ -106,7 +106,9 @@ function love.draw()
     love.graphics.draw(background, 0, background_position_y - background:getHeight())
 
     love.graphics.print("FPS: " ..love.timer.getFPS() .. '\nMem(kB): ' .. math.floor(collectgarbage("count")), 10, 10)
-    love.graphics.print("Meteoros restantes: "..VICTORY_TRIGGER-METEOROS_DESTRUIDOS, LARGURA_TELA/2 - 195, ALTURA_TELA/2+400, 0,2,2)
+
+    love.graphics.print("SHIFT: BOOST", LARGURA_TELA/2 - 100, ALTURA_TELA/2+350, 0,2,2)
+    love.graphics.print("METEOROS RESTANTES: "..VICTORY_TRIGGER-METEOROS_DESTRUIDOS, LARGURA_TELA/2 - 195, ALTURA_TELA/2+400, 0,2,2)
     
     love.graphics.draw(nave.image, nave.x, nave.y, 0, nave.sizeX, nave.sizeY, 20, 0)
     

@@ -4,8 +4,8 @@ nave = {
     altura =   120,
     sizeX = 1,
     sizeY = 1,
-    x = LARGURA_TELA / 2 - 110/2,
-    y = ALTURA_TELA - 200,
+    x = LARGURA_TELA / 2 - 69/2,
+    y = ALTURA_TELA - 300,
     tiros = {}
 }
 
@@ -79,35 +79,68 @@ function moveTiros()
 end
 
 function move_nave()
+    
     if love.keyboard.isDown('w') then
-        nave.y = nave.y - 1
+        if nave.y <= ALTURA_TELA and nave.y >= ALTURA_TELA - ALTURA_TELA then
+            nave.y = nave.y - 1
+        else
+            nave.y = nave.y + 10
+        end
     end
 
     if love.keyboard.isDown('w') and love.keyboard.isDown('lshift') then
-        nave.y = nave.y + 0.5
+        if nave.y <= ALTURA_TELA and nave.y >= ALTURA_TELA - ALTURA_TELA then
+            nave.y = nave.y - 1
+        else
+            nave.y = nave.y + 10
+        end
     end
 
     if love.keyboard.isDown('s') then
-        nave.y = nave.y + 1
+        if nave.y <= ALTURA_TELA-260 and nave.y >= ALTURA_TELA - ALTURA_TELA then
+            nave.y = nave.y + 1
+        else
+            nave.y = nave.y - 10
+        end
     end
 
     if love.keyboard.isDown('s') and love.keyboard.isDown('lshift') then
-        nave.y = nave.y - 0.5
+        if nave.y <= ALTURA_TELA-260 and nave.y >= ALTURA_TELA - ALTURA_TELA then
+            nave.y = nave.y + 1
+        else
+            nave.y = nave.y - 10
+        end
     end
 
     if love.keyboard.isDown('a') then
-        nave.x = nave.x - 1
+        if nave.x <= LARGURA_TELA and nave.x >= LARGURA_TELA - LARGURA_TELA then
+            nave.x = nave.x - 1
+        else
+            nave.x = nave.x + 10
+        end
     end
 
     if love.keyboard.isDown('a') and love.keyboard.isDown('lshift') then
-        nave.x = nave.x + 0.5
+        if nave.x <= LARGURA_TELA and nave.x >= LARGURA_TELA - LARGURA_TELA then
+            nave.x = nave.x - 1
+        else
+            nave.x = nave.x + 10
+        end
     end
 
     if love.keyboard.isDown('d') then
-        nave.x = nave.x + 1
+        if nave.x <= LARGURA_TELA-70 and nave.x >= LARGURA_TELA - LARGURA_TELA then
+            nave.x = nave.x + 1
+        else
+            nave.x = nave.x - 10
+        end
     end
 
     if love.keyboard.isDown('d') and love.keyboard.isDown('lshift') then
-        nave.x = nave.x - 0.5
+        if nave.x <= LARGURA_TELA-70 and nave.x >= LARGURA_TELA - LARGURA_TELA then
+            nave.x = nave.x + 1
+        else
+            nave.x = nave.x - 10
+        end
     end
 end
